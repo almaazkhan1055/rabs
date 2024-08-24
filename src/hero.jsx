@@ -6,7 +6,7 @@ const Hero = () => {
   const { heading, subheading, btntext } = heroData[0];
 
   return (
-    <div className="hero bg-hero bg-cover bg-center bg-no-repeat h-[110dvh] w-full flex pt-10 justify-center text-center text-white px-4">
+    <div className="hero bg-hero bg-cover bg-center bg-no-repeat w-full flex pt-10 justify-center text-center text-white px-4">
       <div>
         <span className="text-xl md:text-xl lg:text-2xl font-bold mb-4 p-2 px-6 bg-gradient-to-r from-[rgb(2,50,134)] via-[rgb(18,99,177)] text-center to-[rgb(0,147,221)]">
           {heading}
