@@ -4,22 +4,46 @@ import "./index.css";
 
 const Hero = () => {
   const [heroData, setHeroData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://almaazkhan1055.github.io/rabsdata/rabs_data.json")
-      .then((response) => response.json())
-      .then((data) => {
-        // Find the heroData item
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://almaazkhan1055.github.io/rabsdata/rabs_data.json"
+        );
+        const data = await response.json();
         const heroDataItem = data.heroData[0];
         if (heroDataItem) {
           setHeroData(heroDataItem);
         }
-      })
-      .catch((error) => console.error("Error fetching data:", error));
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setTimeout(() => {
+          setLoading(false);
+        }, 2000);
+      }
+    };
+
+    fetchData();
   }, []);
 
+  if (loading) {
+    return (
+      <div className="skeleton-loader">
+        <div className="skeleton-heading"></div>
+        <div className="skeleton-subheading"></div>
+        <div className="skeleton-buttons">
+          <div className="skeleton-button"></div>
+          <div className="skeleton-button"></div>
+        </div>
+      </div>
+    );
+  }
+
   if (!heroData) {
-    return <div>Loading...</div>;
+    return <div>Error loading data</div>;
   }
 
   const { heading, subheading, btntext } = heroData;

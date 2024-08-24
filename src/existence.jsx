@@ -37,7 +37,6 @@ const Existence = () => {
       <div className="lg:grid lg:grid-cols-[0.4fr,1fr] grid grid-cols-1 items-center justify-around space-y-8 md:space-y-0 md:space-x-8 content-start">
         <div className="flex-1">
           <div className="space-y-4 md:flex md:flex-col md:items-start gap-10 flex items-center justify-center">
-            {/* Carousel for mobile view */}
             {existenceData.rating.map((item, index) => (
               <div
                 key={index}
