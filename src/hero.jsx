@@ -1,9 +1,28 @@
-import React from "react";
-import { heroData } from "./data/data";
+import React, { useState, useEffect } from "react";
 import Arrow from "./arrow";
+import "./index.css";
 
 const Hero = () => {
-  const { heading, subheading, btntext } = heroData[0];
+  const [heroData, setHeroData] = useState(null);
+
+  useEffect(() => {
+    fetch("https://almaazkhan1055.github.io/rabsdata/rabs_data.json")
+      .then((response) => response.json())
+      .then((data) => {
+        // Find the heroData item
+        const heroDataItem = data.heroData[0];
+        if (heroDataItem) {
+          setHeroData(heroDataItem);
+        }
+      })
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
+  if (!heroData) {
+    return <div>Loading...</div>;
+  }
+
+  const { heading, subheading, btntext } = heroData;
 
   return (
     <div className="hero bg-hero bg-cover bg-center bg-no-repeat w-full flex pt-10 justify-center text-center text-white px-4">

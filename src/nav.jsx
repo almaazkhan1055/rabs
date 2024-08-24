@@ -1,18 +1,29 @@
+import React, { useState, useEffect } from "react";
 import "./index.css";
-import { navData } from "./data/data";
-import { useState } from "react";
 import phone from "./assets/phone.png";
 
 const Nav = () => {
+  const [navData, setNavData] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
-  const { logo, navigationList, contact } = navData[0];
+
+  useEffect(() => {
+    fetch("https://almaazkhan1055.github.io/rabsdata/rabs_data.json")
+      .then((res) => res.json())
+      .then((data) => setNavData(data));
+  }, []);
+
+  if (!navData) {
+    return <div>Loading...</div>;
+  }
+
+  const { logo, navigationList, contact } = navData.navData[0];
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <div className="bg-white shadow-md px-6 py-2 ">
+    <div className="bg-white shadow-md px-6 py-2">
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <img src={logo} alt="Logo" className="h-12" />
         <button onClick={toggleMenu} className="md:hidden focus:outline-none">
@@ -28,14 +39,12 @@ const Nav = () => {
           } transition-all duration-300 ease-in-out overflow-hidden md:flex md:max-h-none md:opacity-100 md:space-x-4 absolute md:static top-16 left-0 right-0 bg-white md:bg-transparent px-4 py-4 md:p-0`}
         >
           <ul className="md:flex md:space-x-4 md:items-center">
-            {navigationList.map((item, index) => (
-              <>
-                <li key={index} className="md:mb-0 mb-2">
-                  <a href={item.url} className="text-gray-500">
-                    {item.text}
-                  </a>
-                </li>
-              </>
+            {navigationList?.map((item, index) => (
+              <li key={index} className="md:mb-0 mb-2">
+                <a href={item.url} className="text-gray-500">
+                  {item.text}
+                </a>
+              </li>
             ))}
             <div className="flex items-center justify-start gap-2 text-xl font-bold">
               <img
@@ -44,7 +53,7 @@ const Nav = () => {
                 alt="phone"
               />
               <h4 className="bg-gray-400 text-gray-700">
-                Let's Talk +91 98336 36916
+                Let's Talk {contact}
               </h4>
             </div>
           </ul>

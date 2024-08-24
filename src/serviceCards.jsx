@@ -12,8 +12,7 @@ const ServiceCards = ({
   return (
     <div className="flex items-center justify-center gap-4 my-10 lg:px-0 px-2">
       <div
-        className={`textCard flex justify-center items-start lg:w-[49%] w-full gap-5 border-2 border-[#575757] rounded-[20px] py-[40px] px-[48px] 
-        bg-custom-gradient md:bg-none bg-gradient-to-r from-[${bgcolor1}] to-[${bgcolor2}]`}
+        className={`textCard flex justify-center items-start lg:w-[49%] w-full gap-5 border-2 border-[#575757] rounded-[20px] py-[40px] px-[48px] bg-custom-gradient`}
       >
         <img src={img1} width={80} alt="img" className={rotate} />
         <div className={`text-[14px] text-gray-800`}>{text1}</div>

@@ -1,19 +1,34 @@
 import React, { useState, useEffect } from "react";
-import { existenceData } from "./data/data";
 import Arrow from "./arrow";
 
 const Existence = () => {
+  const [existenceData, setExistenceData] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex(
-        (prevIndex) => (prevIndex + 1) % existenceData.rating.length
-      );
-    }, 3000);
-
-    return () => clearInterval(interval);
+    fetch("https://almaazkhan1055.github.io/rabsdata/rabs_data.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const { existenceData } = data;
+        setExistenceData(existenceData);
+      });
   }, []);
+
+  useEffect(() => {
+    if (existenceData && existenceData.rating) {
+      const interval = setInterval(() => {
+        setCurrentIndex(
+          (prevIndex) => (prevIndex + 1) % existenceData.rating.length
+        );
+      }, 3000);
+
+      return () => clearInterval(interval);
+    }
+  }, [existenceData]);
+
+  if (!existenceData) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="mx-auto px-4 py-8">
