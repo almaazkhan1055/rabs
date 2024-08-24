@@ -1,0 +1,257 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bggray: rgb(5, 6, 45);
+  --button-border: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-pulse-custom {
+  animation: pulse 1.5s infinite;
+}
+
+.img-size {
+  width: 20px;
+  height: auto;
+}
+
+.hero {
+  background-image: url(/public/hero.svg);
+}
+
+@keyframes bounce-up-down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce-up-down {
+  animation: bounce-up-down 2s infinite;
+}
+@keyframes slide-text {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.marquee-container {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.marquee-text {
+  color: #0f74bc;
+  font-size: clamp(1.8rem, -2.2rem + 12.8vw, 5rem);
+  animation: slide-text 80s linear infinite;
+}
+.textCard {
+  box-shadow: -18px 10px 47px -17px rgba(0, 0, 0, 0.75);
+}
+.bg-serviceCard {
+  background-image: linear-gradient(to right, black, #ffffff60),
+    url("https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/services/serviceboximg/ui.jpg");
+  background-repeat: no-repeat;
+  background-position: 80% center;
+  padding: 79px;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: 80% center;
+  text-align: center;
+  color: white;
+}
+.reactlogo {
+  animation: reactrotates 10.8s infinite linear;
+}
+
+@keyframes reactrotates {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.carouselContainer {
+  background-image: url("https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/industries/5.webp");
+}
+
+.gradient-border {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.gradient-border::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: inherit;
+  border-radius: inherit;
+  z-index: -1;
+}
+.gradient-border {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff00ff, #00ffff);
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.gradient-border::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: inherit;
+  border-radius: inherit;
+  z-index: -1;
+}
+.achievements {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid slice'%3E%3Cdefs%3E%3CradialGradient id='Gradient1' cx='50%25' cy='50%25' fx='0.441602%25' fy='50%25' r='.5'%3E%3Canimate attributeName='fx' dur='34s' values='0%25;3%25;0%25' repeatCount='indefinite'%3E%3C/animate%3E%3Cstop offset='0%25' stop-color='rgba(255, 0, 255, 1)'%3E%3C/stop%3E%3Cstop offset='100%25' stop-color='rgba(255, 0, 255, 0)'%3E%3C/stop%3E%3C/radialGradient%3E%3CradialGradient id='Gradient2' cx='50%25' cy='50%25' fx='2.68147%25' fy='50%25' r='.5'%3E%3Canimate attributeName='fx' dur='23.5s' values='0%25;3%25;0%25' repeatCount='indefinite'%3E%3C/animate%3E%3Cstop offset='0%25' stop-color='rgba(255, 255, 0, 1)'%3E%3C/stop%3E%3Cstop offset='100%25' stop-color='rgba(255, 255, 0, 0)'%3E%3C/stop%3E%3C/radialGradient%3E%3CradialGradient id='Gradient3' cx='50%25' cy='50%25' fx='0.836536%25' fy='50%25' r='.5'%3E%3Canimate attributeName='fx' dur='21.5s' values='0%25;3%25;0%25' repeatCount='indefinite'%3E%3C/animate%3E%3Cstop offset='0%25' stop-color='rgba(0, 255, 255, 1)'%3E%3C/stop%3E%3Cstop offset='100%25' stop-color='rgba(0, 255, 255, 0)'%3E%3C/stop%3E%3C/radialGradient%3E%3CradialGradient id='Gradient4' cx='50%25' cy='50%25' fx='4.56417%25' fy='50%25' r='.5'%3E%3Canimate attributeName='fx' dur='23s' values='0%25;5%25;0%25' repeatCount='indefinite'%3E%3C/animate%3E%3Cstop offset='0%25' stop-color='rgba(0, 255, 0, 1)'%3E%3C/stop%3E%3Cstop offset='100%25' stop-color='rgba(0, 255, 0, 0)'%3E%3C/stop%3E%3C/radialGradient%3E%3CradialGradient id='Gradient5' cx='50%25' cy='50%25' fx='2.65405%25' fy='50%25' r='.5'%3E%3Canimate attributeName='fx' dur='24.5s' values='0%25;5%25;0%25' repeatCount='indefinite'%3E%3C/animate%3E%3Cstop offset='0%25' stop-color='rgba(0,0,255, 1)'%3E%3C/stop%3E%3Cstop offset='100%25' stop-color='rgba(0,0,255, 0)'%3E%3C/stop%3E%3C/radialGradient%3E%3CradialGradient id='Gradient6' cx='50%25' cy='50%25' fx='0.981338%25' fy='50%25' r='.5'%3E%3Canimate attributeName='fx' dur='25.5s' values='0%25;5%25;0%25' repeatCount='indefinite'%3E%3C/animate%3E%3Cstop offset='0%25' stop-color='rgba(255,0,0, 1)'%3E%3C/stop%3E%3Cstop offset='100%25' stop-color='rgba(255,0,0, 0)'%3E%3C/stop%3E%3C/radialGradient%3E%3C/defs%3E%3Crect x='13.744%25' y='1.18473%25' width='100%25' height='100%25' fill='url(%23Gradient1)' transform='rotate(334.41 50 50)'%3E%3Canimate attributeName='x' dur='20s' values='25%25;0%25;25%25' repeatCount='indefinite'%3E%3C/animate%3E%3Canimate attributeName='y' dur='21s' values='0%25;25%25;0%25' repeatCount='indefinite'%3E%3C/animate%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 50 50' to='360 50 50' dur='7s' repeatCount='indefinite'%3E%3C/animateTransform%3E%3C/rect%3E%3Crect x='-2.17916%25' y='35.4267%25' width='100%25' height='100%25' fill='url(%23Gradient2)' transform='rotate(255.072 50 50)'%3E%3Canimate attributeName='x' dur='23s' values='-25%25;0%25;-25%25' repeatCount='indefinite'%3E%3C/animate%3E%3Canimate attributeName='y' dur='24s' values='0%25;50%25;0%25' repeatCount='indefinite'%3E%3C/animate%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 50 50' to='360 50 50' dur='12s' repeatCount='indefinite'%3E%3C/animateTransform%3E%3C/rect%3E%3Crect x='9.00483%25' y='14.5733%25' width='100%25' height='100%25' fill='url(%23Gradient3)' transform='rotate(139.903 50 50)'%3E%3Canimate attributeName='x' dur='25s' values='0%25;25%25;0%25' repeatCount='indefinite'%3E%3C/animate%3E%3Canimate attributeName='y' dur='12s' values='0%25;25%25;0%25' repeatCount='indefinite'%3E%3C/animate%3E%3CanimateTransform attributeName='transform' type='rotate' from='360 50 50' to='0 50 50' dur='9s' repeatCount='indefinite'%3E%3C/animateTransform%3E%3C/rect%3E%3C/svg%3E");
+  background-size: cover;
+}
+.review-container {
+  position: relative;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.review-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://www.rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/review_background.svg");
+  background-size: cover;
+  background-repeat: repeat-y;
+  animation: move_up 40s infinite linear;
+}
+
+@keyframes move_up {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.review-content {
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.testimonial-box {
+  border-radius: 15px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 11px 43px 0px rgb(23 51 87 / 11%);
+  max-width: 500px;
+  overflow: hidden;
+}
+
+.testimonial-box.left {
+  margin-left: 5%;
+}
+
+.testimonial-box.right {
+  margin-right: 5%;
+}
+
+@media (max-width: 768px) {
+  .testimonial-box {
+    width: 80%;
+  }
+}
+.footerbbtm {
+  height: 1px; /* Set the height to 1px */
+  background: -webkit-linear-gradient(
+    left,
+    rgb(255 255 255) 0%,
+    rgb(251 251 251) 10%,
+    #ffffff 50%,
+    rgba(0, 0, 0, 0) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgb(255 255 255) 0%,
+    rgb(251 251 251) 10%,
+    #ffffff 50%,
+    rgba(0, 0, 0, 0) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
