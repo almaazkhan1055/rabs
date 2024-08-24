@@ -1,7 +1,7 @@
 import React from "react";
-import TeamMember from "./teammember";
 import { teamMemberData } from "./data/data";
 import Arrow from "./arrow";
+import TeamMember from "./teamMember";
 
 const TeamSection = () => {
   return (
