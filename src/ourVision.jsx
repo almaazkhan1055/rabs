@@ -1,6 +1,10 @@
 import React from "react";
 import VisionCard from "./visionCard";
 import Arrow from "./arrow";
+import vision from "./assets/vision.svg";
+import strategic from "./assets/strategic.svg";
+import creative from "./assets/creative.svg";
+import launch from "./assets/launch.svg";
 
 const OurVision = () => {
   return (
@@ -11,9 +15,7 @@ const OurVision = () => {
         Success
       </h2>
       <VisionCard
-        img={
-          "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/approach/understanding%20your%20vision.svg"
-        }
+        img={vision}
         heading={"1. Understanding Your Vision"}
         span1={
           "We begin by engaging with you to comprehend your vision and goals for the website. Through detailed discussions, we gather insights into your business, target audience, and specific requirements. This initial step lays the foundation for a project that aligns seamlessly with your objectives."
@@ -26,9 +28,7 @@ const OurVision = () => {
         }
       />
       <VisionCard
-        img={
-          "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/approach/strategic-planning.svg"
-        }
+        img={strategic}
         heading={"2. Strategic Planning"}
         span1={
           "Now that we've nailed down your goals, it's strategy party time! Our expert team huddles up to sketch out a detailed plan. We define the project's scope, mark key milestones, and set timelines in stone. This thoughtful strategy not only ensures a structured development process but also lays the groundwork for a victorious outcome. It's like creating a treasure map to success for your project!"
@@ -41,9 +41,7 @@ const OurVision = () => {
         }
       />
       <VisionCard
-        img={
-          "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/approach/creative.svg"
-        }
+        img={creative}
         width="100%"
         heading={"3. Creative Design and User Experience"}
         span1={
@@ -55,9 +53,7 @@ const OurVision = () => {
         span3={"We Unleash Vibrancy Through Dynamic Interactions!"}
       />
       <VisionCard
-        img={
-          "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/approach/strategic-planning.svg"
-        }
+        img={strategic}
         heading={"4. Development with Precision"}
         span1={
           "Armed with a solid plan and captivating design, our development team dives into the coding process. We leverage the latest technologies and best practices to bring your website to life. Regular testing and quality assurance checks are integral to our development process, guaranteeing a robust and error-free final product."
@@ -70,9 +66,7 @@ const OurVision = () => {
         }
       />
       <VisionCard
-        img={
-          "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/approach/launch.svg"
-        }
+        img={launch}
         width="100%"
         heading={"5. Launch and Continuous Improvement"}
         span1={

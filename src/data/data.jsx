@@ -1,9 +1,35 @@
 import { IoIosStar, IoMdMail } from "react-icons/io";
 import { FaBuilding, FaPhoneAlt } from "react-icons/fa";
+import logo from "../assets/logo.png";
+import circle from "../assets/circle.png";
+import phone1 from "../assets/phone1.png";
+import wordpress from "../assets/wordpress.png";
+import landingpage from "../assets/landingpage.png";
+import portfolio from "../assets/portfolio.png";
+import corporate from "../assets/corporate.png";
+import reactjs from "../assets/reactjs.png";
+import realestate from "../assets/realestate.png";
+import ui from "../assets/ui.jpg";
+import wp from "../assets/wp.jpg";
+import landing from "../assets/landing.jpg";
+import portfolio1 from "../assets/portfolio1.jpg";
+import corporate1 from "../assets/corporate1.jpg";
+import react from "../assets/react.jpg";
+import realestate1 from "../assets/realestate1.jpg";
+import img1 from "../assets/1.jpg";
+import img2 from "../assets/2.jpg";
+import img5 from "../assets/3.jpg";
+import img6 from "../assets/4.jpg";
+import img7 from "../assets/5.jpg";
+import img3 from "../assets/6.jpg";
+import img4 from "../assets/7.jpg";
+import img8 from "../assets/8.jpg";
+import rehanhalai from "../assets/rehan-halai.jpg";
+import bilalhalai from "../assets/bilal-halai.jpg";
 
 export const navData = [
   {
-    logo: "https://rabsnetsolutions.com/experience-center/assets/img/membership/logo.png",
+    logo: logo,
     navigationList: [
       { text: "Home", url: "#" },
       { text: "Services", url: "#" },
@@ -32,7 +58,7 @@ export const marqueeData = {
     " Absolutely!  World-Leading Website Designers at Your Service ",
     " Absolutely!  World-Leading Website Designers at Your Service ",
   ],
-  img: "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/records.png",
+  img: circle,
 };
 
 export const existenceData = {
@@ -102,6 +128,7 @@ export const carouselData = [
       "Revolutionize education with RABS' cutting-edge EdTech solutions,redefining learning experiences for the modern world. Empower educators and learners with transformative digital tools that transcend traditional boundaries.",
     image:
       "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/edtech.jpg",
+    img: "https://www.rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/graduation-cap.png",
   },
 
   {
@@ -126,45 +153,45 @@ export const serviceCardsData = [
   {
     text1:
       "Elevate user experiences with our UI/UX design expertise. Intuitive interfaces, seamless navigation, and visually captivating designs tailored to your brand.",
-    img1: "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/services/icons/ui.png",
+    img1: phone1,
     text2: "UI - UX Design",
-    img2: "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/services/serviceboximg/ui.jpg",
+    img2: ui,
     bgcolor1: "#EB0000",
     bgcolor2: "#990000",
   },
   {
     text1:
       "Empower your online presence with our WordPress prowess. Customized themes, plugins, and seamless functionality for a standout and user-friendly website.",
-    img1: "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/services/icons/wordpress.png",
+    img1: wordpress,
     text2: "Wordpress Development",
-    img2: "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/services/serviceboximg/wp.jpg",
+    img2: wp,
     bgcolor1: "#6D0451",
     bgcolor2: "#420231",
   },
   {
     text1:
       "Craft compelling first impressions. Our landing pages are designed for conversion, seamlessly guiding visitors to take visuals and intuitive user journeys.",
-    img1: "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/services/icons/landingpage.png",
+    img1: landingpage,
     text2: "Landing Page Development",
-    img2: "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/services/serviceboximg/landing.jpg",
+    img2: landing,
     bgcolor1: "#1B1A53",
     bgcolor2: "#101033",
   },
   {
     text1:
       "Showcase your work elegantly. Our portfolio websites combine sleek design with intuitive navigation, presenting your achievements in a visually compelling manner.",
-    img1: "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/services/icons/portfolio.png",
+    img1: portfolio,
     text2: "Portfolio Website",
-    img2: "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/services/serviceboximg/portfolio.jpg",
+    img2: portfolio1,
     bgcolor1: "#720E20",
     bgcolor2: "#440813",
   },
   {
     text1:
       "Make a powerful online statement with our corporate website solutions. Professional design, robust functionality, and seamless navigation for an impactful digital presence.",
-    img1: "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/services/icons/corporate.png",
+    img1: corporate,
     text2: "Corporate Websites",
-    img2: "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/services/serviceboximg/corporate.jpg",
+    img2: corporate1,
     bgcolor1: "#005940",
     bgcolor2: "#003526",
   },
@@ -172,36 +199,27 @@ export const serviceCardsData = [
     rotate: "reactlogo",
     text1:
       "Harness the power of PHP and React for dynamic and scalable websites. Our solutions blend server-side efficiency with interactive, client-side experiences.",
-    img1: "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/services/icons/reactjs.png",
+    img1: reactjs,
     text2: "PHP & React Website",
-    img2: "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/services/serviceboximg/react.jpg",
+    img2: react,
     bgcolor1: "#2D4255",
     bgcolor2: "#1A2732",
   },
   {
     text1:
       "Transform property listings into experiences. Our real estate websites offer intuitive navigation, immersive visuals, and powerful features for seamless property exploration.",
-    img1: "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/services/icons/realestate.png",
+    img1: realestate,
     text2: "Real Estate Developers Website",
-    img2: "https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/services/serviceboximg/realestate.jpg",
+    img2: realestate1,
     bgcolor1: "#301D1D",
     bgcolor2: "#1D1212",
   },
 ];
-export const reviewData = [
-  "https://www.rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/review/1.JPG",
-  "https://www.rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/review/2.JPG",
-  "https://www.rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/review/3.JPG",
-  "https://www.rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/review/4.JPG",
-  "https://www.rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/review/5.JPG",
-  "https://www.rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/review/6.JPG",
-  "https://www.rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/review/7.JPG",
-  "https://www.rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/review/8.JPG",
-];
+export const reviewData = [img1, img2, img3, img4, img5, img6, img7, img8];
 
 export const teamMemberData = [
   {
-    img: "https://www.rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/team/rehan-halai.jpg",
+    img: rehanhalai,
     name: "MR. REHAN HALAI",
     logo: "https://www.rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/team/my-business-icon.png",
     designation: "DIRECTOR & FOUNDER",
@@ -209,7 +227,7 @@ export const teamMemberData = [
       "Director and Founder of RABS Net Solutions, it’s my pleasure to introduce to you our dynamic organization with the solutions we offer. We always look forward to add real value to your business through our analytical and inventive ways with every single project. We're committed to TAKING YOU FORWARD, with passion, innovation, creating value for our Clients.",
   },
   {
-    img: "https://www.rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/team/bilal-halai.jpg",
+    img: bilalhalai,
     name: "MR. BILAL HALAI",
     logo: "https://www.rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/team/my-business-icon.png",
     designation: "STRATEGY & RESEARCH ANALYST",

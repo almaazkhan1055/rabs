@@ -1,5 +1,6 @@
 import React from "react";
 import Wrapper from "./wrapper";
+import hero2 from "./assets/hero2.jpg";
 
 const Achievements = () => {
   return (
@@ -10,14 +11,11 @@ const Achievements = () => {
       </h2>
       <Wrapper>
         <div>
-          <img
-            src="https://www.rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/hero2.jpg"
-            alt=""
-          />
+          <img src={hero2} alt="" />
         </div>
-        <h4 className="achievements-text text-[25px] text-center mt-5 font-semibold">
-          ("Receive awards from the Honorable Chief Minister of Goa and the
-          Governor of Sikkim")
+        <h4 className="achievements-text text-[25px] text-center mt-5 font-semibold gradient-text">
+          Receive awards from the Honorable Chief Minister of Goa and the
+          Governor of Sikkim
         </h4>
       </Wrapper>
     </div>

@@ -6,7 +6,7 @@ import TeamMember from "./teamMember";
 const TeamSection = () => {
   return (
     <>
-      <div className="p-12">
+      <div className="md:p-12 py-12">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">Our Team</h2>
           <div className="flex flex-wrap -mx-4">

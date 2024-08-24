@@ -1,4 +1,5 @@
 import React from "react";
+import arrow from "./assets/arrow.png";
 
 const Arrow = ({ mt }) => {
   return (
@@ -8,11 +9,7 @@ const Arrow = ({ mt }) => {
         marginTop: mt ? mt : "",
       }}
     >
-      <img
-        src="https://rabsnetsolutions.com/experience-center/assets/img/membership/slider/arrow.png"
-        alt=""
-        className="animate-bounce-up-down"
-      />
+      <img src={arrow} alt="" className="animate-bounce-up-down" />
     </div>
   );
 };

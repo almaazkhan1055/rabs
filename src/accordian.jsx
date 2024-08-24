@@ -8,7 +8,7 @@ const AccordionItem = ({ title, content }) => {
   return (
     <div className="mb-4">
       <button
-        className="flex items-center w-full py-2 px-4 text-left text-white bg-transparent hover:bg-opacity-20 hover:bg-white transition-colors duration-200"
+        className="flex items-center w-full py-2 md:px-4 text-left text-white bg-transparent hover:bg-opacity-20 hover:bg-white transition-colors duration-200"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="font-medium text-[14px]">Q. {title}</span>
@@ -24,7 +24,7 @@ const AccordionItem = ({ title, content }) => {
 
 const Accordion = () => {
   return (
-    <div className="w-full bg-[#140D28] p-8">
+    <div className="w-full bg-[#140D28] md:p-8 p-4">
       <Wrapper>
         <h1 className="text-4xl font-semibold text-white mb-8 text-center">
           FAQ'S:
