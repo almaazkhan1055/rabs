@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./Header";
 import "./index.css";
 import Hero from "./hero";
 import Marquee from "./marque";
@@ -14,11 +13,12 @@ import Review from "./review";
 import TeamSection from "./teamSection";
 import Accordion from "./accordian";
 import Footer from "./footer";
+import Nav from "./nav";
 
 function App() {
   return (
     <div>
-      <Header />
+      <Nav />
       <Hero />
       <Marquee />
       <Wrapper>

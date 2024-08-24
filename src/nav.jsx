@@ -2,11 +2,11 @@ import React from "react";
 import "./index.css";
 import { navData } from "./data/data";
 
-const Header = () => {
+const Nav = () => {
   const { logo, navigationList, contact } = navData[0];
 
   return (
-    <header className="bg-white shadow-md px-6 py-2 fixed top-0 left-0 right-0 z-10">
+    <div className="bg-white shadow-md px-6 py-2 fixed top-0 left-0 right-0 z-10">
       <div className="container mx-auto px-4 py-2 flex justify-between items-center">
         <img src={logo} alt="Logo" className="h-12" />
         <nav>
@@ -34,8 +34,8 @@ const Header = () => {
           <div className="text-black font-bold">Lets Talk: {contact}</div>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 
-export default Header;
+export default Nav;
