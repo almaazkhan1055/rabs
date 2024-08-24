@@ -20,7 +20,7 @@ const ServiceCards = ({
       <div
         className="bg-serviceCard hidden lg:block w-[49%] bg-cover bg-center font-bold"
         style={{
-          backgroundImage: `linear-gradient(to right, black, ${bgcolor1}), url(${img2})`,
+          backgroundImage: `url(${img2})`,
         }}
       >
         <span className="text-center text-lg">{text2}</span>

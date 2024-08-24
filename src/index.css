@@ -92,8 +92,7 @@ body {
   box-shadow: -18px 10px 47px -17px rgba(0, 0, 0, 0.75);
 }
 .bg-serviceCard {
-  background-image: linear-gradient(to right, black, #ffffff60),
-    url("https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/services/serviceboximg/ui.jpg");
+  background-image: linear-gradient(to right, black, #ffffff60);
   background-repeat: no-repeat;
   background-position: 80% center;
   padding: 79px;
