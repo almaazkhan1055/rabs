@@ -24,20 +24,24 @@ const ServiceCards = ({
         className={`textCard flex justify-center items-center lg:w-[49%] w-full gap-5 border-2 border-[#575757] rounded-[20px] py-[40px] px-[48px]  bg-custom-gradient`}
         style={{
           background: isMobile
-            ? `${bgcolor1} linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.1))`
+            ? `${bgcolor1} linear-gradient(to right, ${bgcolor1}, ${bgcolor2})`
             : `linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1))`,
           backgroundSize: "cover",
           backgroundPosition: "center",
+          color: isMobile ? "white" : "black",
         }}
       >
         <img src={img1} width={80} alt="img" className={rotate} />
-        <div className="flex flex-col items-start">
+        <div
+          className="flex flex-col items-start"
+          style={{
+            color: isMobile ? "white" : "black",
+          }}
+        >
           <span className="text-[16px] font-bold  md:hidden block">
             {text2}
           </span>
-          <div className={`sm:text-[18px] text-[12px] text-gray-800 `}>
-            {text1}
-          </div>
+          <div className={`sm:text-[18px] text-[12px]`}>{text1}</div>
         </div>
       </div>
       <div
