@@ -1,11 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Arrow from "./arrow";
-import { IoIosStar } from "react-icons/io";
 import Star from "./star";
+import Aos from "aos";
 
 const Existence = () => {
   const [existenceData, setExistenceData] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  Aos.init();
+
+  const updateIndex = useCallback(() => {
+    setCurrentIndex((prevIndex) =>
+      existenceData && existenceData.rating
+        ? (prevIndex + 1) % existenceData.rating.length
+        : prevIndex
+    );
+  }, [existenceData]);
 
   useEffect(() => {
     fetch("https://almaazkhan1055.github.io/rabsdata/rabs_data.json")
@@ -26,14 +35,13 @@ const Existence = () => {
 
       return () => clearInterval(interval);
     }
-  }, [existenceData]);
+  }, [existenceData, updateIndex]);
 
   if (!existenceData) {
     return <div>Loading...</div>;
   }
-
   return (
-    <div className="mx-auto px-4 py-8">
+    <div className="mx-auto px-4 py-8" id="overview">
       <h2 className="text-4xl font-bold mb-8 text-center">Our Existence</h2>
 
       <div className="lg:grid lg:grid-cols-[0.4fr,1fr] grid grid-cols-1 items-center justify-around space-y-8 md:space-y-0 md:space-x-8 content-start">
@@ -46,7 +54,10 @@ const Existence = () => {
                   index === currentIndex ? "block" : "hidden"
                 } md:block`}
               >
-                <div className="pl-4 border-l-0 md:border-l-4 border-[#0F5AA9] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center">
+                <div
+                  data-aos="fade-up"
+                  className="pl-4 border-l-0 md:border-l-4 border-[#0F5AA9] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center"
+                >
                   <h4 className="text-4xl font-semibold">{item.title}</h4>
                   {item.subtitle && (
                     <div

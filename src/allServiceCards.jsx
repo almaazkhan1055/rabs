@@ -1,34 +1,43 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import ServiceCards from "./serviceCards";
 
 const AllServiceCards = () => {
   const [serviceCardsData, setServiceCardsData] = useState([]);
-  console.log("serviceCardsData", serviceCardsData);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const fetchServiceCardsData = useCallback(async () => {
+    try {
+      setIsLoading(true);
+      const response = await fetch(
+        "https://almaazkhan1055.github.io/rabsdata/rabs_data.json"
+      );
+      const data = await response.json();
+      setServiceCardsData(data.serviceCardsData || []);
+    } catch (error) {
+      console.error("Error fetching service cards data:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  }, []);
 
   useEffect(() => {
-    const fetchServiceCardsData = async () => {
-      try {
-        const response = await fetch(
-          "https://almaazkhan1055.github.io/rabsdata/rabs_data.json"
-        );
-        const data = await response.json();
-        setServiceCardsData(data.serviceCardsData || []);
-      } catch (error) {
-        console.error("Error fetching service cards data:", error);
-      }
-    };
-
     fetchServiceCardsData();
-  }, []);
+  }, [fetchServiceCardsData]);
+
+  if (isLoading) {
+    return <p className="text-center">Loading services...</p>;
+  }
 
   return (
     <>
-      <h2 className="text-center font-bold text-3xl">Services We Offer</h2>
+      <h2 className="text-center font-bold text-3xl" id="services">
+        Services We Offer
+      </h2>
       {serviceCardsData.length > 0 ? (
         serviceCardsData.map((cardData, index) => {
-          console.log(index);
           return (
             <ServiceCards
+              key={index}
               text1={cardData.text1}
               img1={cardData.img1}
               text2={cardData.text2}

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import VisionCard from "./visionCard";
 import Arrow from "./arrow";
 import vision from "./assets/vision.svg";
@@ -55,17 +55,17 @@ const OurVision = () => {
           },
         });
       });
-    }, 2000);
+    }, 3000);
   }, []);
   return (
-    <section className="ourapproach">
+    <section className="ourapproach" id="ourapproach">
       <div className=" text-white py-16 mt-10 plane">
         <div
           style={{ width: "100%", position: "absolute" }}
           className="d-sm-none d-md-block d-lg-block"
         >
           <svg
-            className="svg"
+            className="svg sm:w-[85%] w-[42.5%] h-[50%] sm:h-[100%]"
             style={{
               opacity: 1,
               position: "relative",
@@ -78,8 +78,6 @@ const OurVision = () => {
             xmlns="http://www.w3.org/2000/svg"
             xmlnsXlink="http://www.w3.org/1999/xlink"
             xmlSpace="preserve"
-            width="100%"
-            height="100%"
             version="1.1"
             viewBox="0 0 26667 60000"
           >
@@ -93,8 +91,11 @@ const OurVision = () => {
             </g>
           </svg>
         </div>
-        <img src={paperplane} className="paperplane w-[50px] sm:w-[100px]" />
-        <h2 className="text-5xl font-semibold text-center">
+        <img
+          src={paperplane}
+          className="paperplane absolute md:w-[100px] w-[50px] "
+        />
+        <h2 className="sm:text-5xl text-4xl font-semibold text-center">
           Our Client-Centric Approach to <br />
           <span className="text-[#FFD060]">WEB DEVELOPEMENT </span>
           Success

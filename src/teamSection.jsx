@@ -10,7 +10,7 @@ const TeamSection = () => {
   }, []);
   return (
     <>
-      <div className="md:p-12 py-12">
+      <div className="md:p-12 py-12" id="aboutus">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center mb-8">
             About the Founders

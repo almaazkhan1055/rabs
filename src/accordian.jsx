@@ -6,9 +6,9 @@ const AccordionItem = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="mb-4">
+    <div className="mb-4" id="faq">
       <button
-        className="flex items-center w-full py-2 md:px-4 text-left text-white bg-transparent hover:bg-opacity-20 hover:bg-white transition-colors duration-200"
+        className="flex items-center w-full py-2 md:px-4 text-left text-white bg-transparent transition-colors duration-200"
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className="font-medium sm:text-[24px] text-xl">Q. {title}</span>
