@@ -14,7 +14,7 @@ const VisionCard = ({ img, heading, span1, span2, span3, id }) => {
               minWidth: "350px",
             }}
           />
-          <div className="flex flex-col text-[18px]">
+          <div className="flex my-8 flex-col text-[18px]">
             <span>{span1}</span>
             <br />
             <span>{span2}</span>

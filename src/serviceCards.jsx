@@ -21,7 +21,7 @@ const ServiceCards = ({
     <div className="flex items-center justify-center gap-4 my-10 lg:px-0 px-2 box overflow-hidden">
       <div
         data-aos="fade-left"
-        className={`flex justify-center items-center lg:w-[49%] w-full gap-5 border-2 border-[#575757] rounded-[20px] py-[60px] px-[48px]`}
+        className={`flex justify-center items-center lg:w-[49%] w-full gap-5 border-2 border-[#575757] rounded-[20px] md:py-[60px] py-[30px] px-[48px]`}
         style={{
           background: isMobile
             ? `${bgcolor1} linear-gradient(to right, ${bgcolor1}, ${bgcolor2})`
