@@ -10,7 +10,10 @@ const Nav = () => {
   useEffect(() => {
     fetch("https://almaazkhan1055.github.io/rabsdata/rabs_data.json")
       .then((res) => res.json())
-      .then((data) => setNavData(data));
+      .then((data) => setNavData(data))
+      .catch((error) => {
+        console.error("Error fetching nav data:", error);
+      });
   }, []);
 
   useEffect(() => {
@@ -64,7 +67,7 @@ const Nav = () => {
           </ul>
           <div className="flex items-center justify-start gap-2 text-md font-bold">
             <img
-              className="bg-blue-500 rounded-full p-2 w-8 h-auto"
+              className="bg-blue-500 rounded-full p-2 w-8 h-auto animate-pulse-gray"
               src={phone}
               alt="phone"
             />

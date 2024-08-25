@@ -22,6 +22,9 @@ const Existence = () => {
       .then((data) => {
         const { existenceData } = data;
         setExistenceData(existenceData);
+      })
+      .catch((error) => {
+        console.error("Error fetching existence data:", error);
       });
   }, []);
 

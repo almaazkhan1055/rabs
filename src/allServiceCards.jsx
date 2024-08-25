@@ -14,7 +14,7 @@ const AllServiceCards = () => {
       const data = await response.json();
       setServiceCardsData(data.serviceCardsData || []);
     } catch (error) {
-      console.error("Error fetching service cards data:", error);
+      console.error("Error fetching service data:", error);
     } finally {
       setIsLoading(false);
     }

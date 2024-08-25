@@ -18,7 +18,7 @@ const Hero = () => {
           setHeroData(heroDataItem);
         }
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("Error fetching hero data:", error);
       } finally {
         setLoading(false);
       }

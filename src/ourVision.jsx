@@ -65,7 +65,7 @@ const OurVision = () => {
           className="d-sm-none d-md-block d-lg-block"
         >
           <svg
-            className="svg sm:w-[85%] w-[42.5%] h-[50%] sm:h-[100%]"
+            className="svg sm:w-[85%] w-[500px] h-[100vh] sm:h-[100%]"
             style={{
               opacity: 1,
               position: "relative",
