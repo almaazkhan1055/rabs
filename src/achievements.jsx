@@ -13,7 +13,7 @@ const Achievements = () => {
         <div>
           <img src={hero2} alt="hero2" />
         </div>
-        <h4 className="achievements-text text-[25px] text-center mt-5 font-semibold gradient-text">
+        <h4 className="achievements-text text-[25px] md:text-[32px] text-center mt-5 font-semibold gradient-text">
           Receive awards from the Honorable Chief Minister of Goa and the
           Governor of Sikkim
         </h4>
