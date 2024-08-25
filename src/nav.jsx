@@ -54,7 +54,7 @@ const Nav = () => {
           ref={navRef}
           className={`${
             isOpen ? "h-[250px] opacity-100" : "max-h-0 opacity-0"
-          } transition-all text-md duration-300 ease-in-out overflow-hidden md:flex md:max-h-none md:opacity-100 md:space-x-4 absolute md:static top-16 left-0 right-0 bg-white md:bg-transparent px-4 py-4 md:p-0`}
+          } transition-all text-md duration-300 ease-in-out overflow-hidden md:flex md:max-h-none md:opacity-100 md:space-x-4 absolute md:static top-16 left-0 right-0 bg-white md:bg-transparent px-4 py-4 md:gap-[200px] gap-0`}
         >
           <ul className="md:flex md:space-x-4 md:items-center">
             {navigationList?.map((item, index) => (
@@ -67,7 +67,7 @@ const Nav = () => {
           </ul>
           <div className="flex items-center justify-start gap-2 text-md font-bold">
             <img
-              className="bg-blue-500 rounded-full p-2 w-8 h-auto animate-pulse-gray"
+              className="bg-blue-500 rounded-full p-2 w-8 h-auto animate-pulse-custom"
               src={phone}
               alt="phone"
             />

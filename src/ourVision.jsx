@@ -60,12 +60,9 @@ const OurVision = () => {
   return (
     <section className="ourapproach" id="ourapproach">
       <div className=" text-white py-16 mt-10 plane">
-        <div
-          style={{ width: "100%", position: "absolute" }}
-          className="d-sm-none d-md-block d-lg-block"
-        >
+        <div style={{ width: "100%", position: "absolute" }} className="">
           <svg
-            className="svg sm:w-[85%] w-[500px] h-[100vh] sm:h-[100%]"
+            className="svg w-[85%] h-[100%]"
             style={{
               opacity: 1,
               position: "relative",

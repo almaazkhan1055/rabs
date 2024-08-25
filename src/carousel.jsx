@@ -56,9 +56,10 @@ const Carousel = () => {
         backgroundPosition: "center",
         transition: "background-image 0.3s ease-in-out",
         backgroundRepeat: "no-repeat",
+        backgroundColor: "#00000090",
       }}
     >
-      <h2 className="text-center text-3xl md:text-4xl font-semibold text-white my-3 md:my-5">
+      <h2 className="text-center text-3xl md:text-6xl font-semibold text-white my-3 md:my-5">
         Industries <br />
         <span className="text-[#FFD060]">We've</span> Worked For
       </h2>

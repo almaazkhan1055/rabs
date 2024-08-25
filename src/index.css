@@ -17,20 +17,6 @@ body {
   height: 100%;
   width: 100%;
 }
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.1);
-    opacity: 0.7;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
 
 .animate-pulse-custom {
   animation: pulse 1.5s infinite;
@@ -45,36 +31,10 @@ body {
   background-image: url(/public/hero.svg);
 }
 
-@keyframes bounce-up-down {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
 .animate-bounce-up-down {
   animation: bounce-up-down 2s infinite;
 }
-@keyframes slide-text {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .plane {
   position: relative;
 }
@@ -100,33 +60,25 @@ body {
   font-size: clamp(1.8rem, -2.2rem + 12.8vw, 5rem);
   animation: slide-text 20s linear infinite;
 }
-.textCard {
-  box-shadow: -18px 10px 47px -17px rgba(0, 0, 0, 0.75);
-}
+
 .bg-serviceCard {
   background-image: linear-gradient(to right, black, #ffffff60);
   background-repeat: no-repeat;
   background-position: 80% center;
-  padding: 79px;
+  padding: 100px 80px;
   border-radius: 20px;
   background-size: cover;
   background-position: 80% center;
   text-align: center;
   color: white;
 }
+.gradient {
+  background-image: linear-gradient(to right, black, #ffffff60);
+}
 .reactlogo {
   animation: reactrotates 10.8s infinite linear;
 }
 
-@keyframes reactrotates {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
 .carouselContainer {
   background-image: url("https://rabsnetsolutions.com/experience-center/assets/img/RABS_Landing_Page/industries/5.webp");
 }
@@ -205,15 +157,6 @@ body {
   animation: move_up 40s infinite linear;
 }
 
-@keyframes move_up {
-  0% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-50%);
-  }
-}
-
 .review-content {
   position: relative;
   z-index: 1;
@@ -282,8 +225,101 @@ body {
   opacity: 1;
 }
 
+.contact {
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.sticky-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 100;
+}
+.blink {
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0% {
+    width: 100%;
+    opacity: 1;
+  }
+  100% {
+    width: 100%;
+    opacity: 0.5;
+  }
+}
+
+@keyframes bounce-up-down {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes slide-text {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+  }
+}
+
+@keyframes reactrotates {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes move_up {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
 @media (max-width: 768px) {
   .testimonial-box {
     width: 80%;
+  }
+  .animate-slideInFromRight {
+    animation: slideInFromRight 0.5s ease-out;
   }
 }

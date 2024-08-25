@@ -55,7 +55,9 @@ const Existence = () => {
                 key={index}
                 className={`flex items-center ${
                   index === currentIndex ? "block" : "hidden"
-                } md:block`}
+                } md:block ${
+                  index === currentIndex ? "animate-slideInFromRight" : ""
+                }`}
               >
                 <div
                   data-aos="fade-up"

@@ -30,7 +30,7 @@ const Review = () => {
             <span className="font-bold"> Precision</span> and
             <span className="font-bold"> Performance</span>
           </h4>
-          <h5 className="mb-8 text-sm text-[#636567]">
+          <h5 className="mb-8 text-xl text-[#636567]">
             Here are some noteworthy recognitions and testimonials <br /> that
             underscore our commitment to excellence
           </h5>

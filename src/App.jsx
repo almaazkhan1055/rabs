@@ -14,11 +14,13 @@ import TeamSection from "./teamSection";
 import Accordion from "./accordian";
 import Footer from "./footer";
 import Nav from "./nav";
+import Contact from "./Contact";
 
 function App() {
   return (
     <div>
       <Nav />
+      <Contact />
       <Hero />
       <Marquee />
       <Wrapper>

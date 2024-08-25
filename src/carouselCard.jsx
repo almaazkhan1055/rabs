@@ -6,18 +6,20 @@ export const CarouselCard = ({ slide, isMobile }) => (
         alt={slide.title}
         className="w-full h-full object-cover"
       />
-      <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center">
-        <div className="bg-white p-6 leading-10 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 w-full h-[250px] lg:h-[300px]">
-          <h2 className="text-xl font-bold">{slide.title}</h2>
-          <p className="text-lg">{slide.description}</p>
-          {slide.img && (
-            <img
-              src={slide.img}
-              alt={`${slide.title} icon`}
-              className="mx-auto h-12 w-12 object-contain"
-            />
-          )}
-        </div>
+      <div className="absolute bottom-0 left-0 right-0 bg-white p-4 transform translate-y-[calc(100%-4rem)] group-hover:translate-y-0 transition-transform duration-300 h-full">
+        <h2 className="text-[20px] font-bold mb-2 text-center">
+          {slide.title}
+        </h2>
+        <p className=" text-sm md:text-[18px] text-center mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          {slide.description}
+        </p>
+        {slide.img && (
+          <img
+            src={slide.img}
+            alt={`${slide.title} icon`}
+            className="mx-auto h-12 w-12 object-contain"
+          />
+        )}
       </div>
     </div>
   </div>

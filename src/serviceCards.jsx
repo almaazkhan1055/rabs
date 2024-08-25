@@ -21,11 +21,11 @@ const ServiceCards = ({
     <div className="flex items-center justify-center gap-4 my-10 lg:px-0 px-2 box overflow-hidden">
       <div
         data-aos="fade-left"
-        className={`textCard flex justify-center items-center lg:w-[49%] w-full gap-5 border-2 border-[#575757] rounded-[20px] py-[40px] px-[48px]  bg-custom-gradient`}
+        className={`flex justify-center items-center lg:w-[49%] w-full gap-5 border-2 border-[#575757] rounded-[20px] py-[60px] px-[48px]`}
         style={{
           background: isMobile
             ? `${bgcolor1} linear-gradient(to right, ${bgcolor1}, ${bgcolor2})`
-            : `linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.1))`,
+            : "",
           backgroundSize: "cover",
           backgroundPosition: "center",
           color: isMobile ? "white" : "black",
