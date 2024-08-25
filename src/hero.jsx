@@ -20,9 +20,7 @@ const Hero = () => {
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
-        setTimeout(() => {
-          setLoading(false);
-        }, 2000);
+        setLoading(false);
       }
     };
 
@@ -47,6 +45,7 @@ const Hero = () => {
   }
 
   const { heading, subheading, btntext } = heroData;
+  console.log(heroData, "data");
 
   return (
     <div className="hero bg-hero bg-cover bg-center bg-no-repeat w-full flex pt-10 justify-center text-center text-white px-4">
@@ -57,11 +56,11 @@ const Hero = () => {
         <div className="text-[2rem] tracking-wider md:text-5xl mb-16 md:px-20 mt-10 font-semibold">
           {subheading}
         </div>
-        <div className="flex flex-wrap gap-4 justify-center">
+        <div className="flex flex-wrap gap-4 justify-center max-sm:flex-col max-sm:px-8 max-sm:py-2">
           {btntext.map((text, index) => (
             <button
               key={index}
-              className="relative bg-[--bggray] text-white font-semibold py-2 px-4 rounded-lg transition duration-300 gradient-border hover:bg-gradient-to-r hover:from-[#af40ff] hover:via-[#5b42f3] hover:to-[#00ddeb]"
+              className="relative bg-[--bggray] text-white font-semibold py-2 px-4 rounded-lg max-sm:p-6 transition duration-300 gradient-border hover:bg-gradient-to-r hover:from-[#af40ff] hover:via-[#5b42f3] hover:to-[#00ddeb]"
             >
               <span className="relative z-10">{text}</span>
             </button>

@@ -75,7 +75,21 @@ body {
     opacity: 1;
   }
 }
-
+.plane {
+  position: relative;
+}
+.paperplane {
+  position: absolute;
+  width: 50px;
+}
+#path {
+  stroke-width: 5;
+  stroke: black;
+  fill: none;
+  display: none;
+  width: 100%;
+  height: 100%;
+}
 .marquee-container {
   position: relative;
   overflow: hidden;
@@ -86,7 +100,7 @@ body {
 .marquee-text {
   color: #0f74bc;
   font-size: clamp(1.8rem, -2.2rem + 12.8vw, 5rem);
-  animation: slide-text 80s linear infinite;
+  animation: slide-text 20s linear infinite;
 }
 .textCard {
   box-shadow: -18px 10px 47px -17px rgba(0, 0, 0, 0.75);

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Arrow from "./arrow";
+import { IoIosStar } from "react-icons/io";
+import Star from "./star";
 
 const Existence = () => {
   const [existenceData, setExistenceData] = useState(null);
@@ -44,7 +46,7 @@ const Existence = () => {
                   index === currentIndex ? "block" : "hidden"
                 } md:block`}
               >
-                <div className="pl-4 border-l-0 md:border-l-4 border-[#0F5AA9]">
+                <div className="pl-4 border-l-0 md:border-l-4 border-[#0F5AA9] max-sm:flex max-sm:flex-col max-sm:justify-center max-sm:items-center">
                   <h4 className="text-4xl font-semibold">{item.title}</h4>
                   {item.subtitle && (
                     <div
@@ -52,7 +54,7 @@ const Existence = () => {
                         index === 0 ? "text-yellow-500" : "text-gray-600"
                       } flex items-center`}
                     >
-                      {item.subtitle}
+                      {index === 0 ? <Star /> : item.subtitle}
                     </div>
                   )}
                 </div>

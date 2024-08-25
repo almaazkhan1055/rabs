@@ -11,10 +11,10 @@ const AccordionItem = ({ title, content }) => {
         className="flex items-center w-full py-2 md:px-4 text-left text-white bg-transparent hover:bg-opacity-20 hover:bg-white transition-colors duration-200"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span className="font-medium text-[14px]">Q. {title}</span>
+        <span className="font-medium sm:text-[24px] text-xl">Q. {title}</span>
       </button>
       {isOpen && (
-        <div className="mt-2 pl-4 pr-8 py-2 text-[10px] text-white">
+        <div className="mt-2 pl-4 pr-8 py-2 text-[16px] text-white">
           <p>{content}</p>
         </div>
       )}

@@ -10,11 +10,11 @@ export default function Footer() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h2 className="text-xl font-bold mb-4 ">Services</h2>
+              <h2 className="text-2xl font-bold mb-4 ">Services</h2>
               <div className="h-[1px] footerbbtm mb-4"></div>
               <ul className="text-sm">
                 {navigationData.services.map((service, index) => (
-                  <li key={index} className="mb-2">
+                  <li key={index} className="mb-2 text-xl">
                     <a href={service.href} className="hover:underline">
                       {service.name}
                     </a>
@@ -26,7 +26,7 @@ export default function Footer() {
             <div>
               <h2 className="text-xl font-bold mb-4">Office Address</h2>
               <div className="h-[1px] footerbbtm mb-4"></div>
-              <ul className="text-sm">
+              <ul className="text-xl">
                 {navigationData.officeAddress.map((item, index) => (
                   <li key={index} className="mb-2 flex items-center">
                     <span className="mr-2">{item.name[0]}</span>
@@ -50,7 +50,7 @@ export default function Footer() {
                 <div className="h-[1px] footerbbtm mb-4"></div>
 
                 <div className="flex items-center mb-2">
-                  <input type="checkbox" id="terms" className="mr-2" />
+                  <input type="checkbox" id="terms" className="mr-2 text-xl" />
                   <label htmlFor="terms">
                     {navigationData.newsletter.termsText}
                   </label>
@@ -72,7 +72,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t border-white flex flex-col md:flex-row justify-between items-center text-sm">
+          <div className="mt-8 pt-8 border-t border-white flex flex-col md:flex-row justify-between items-center text-md">
             <p>{navigationData.copyright}</p>
             <div className="mt-4 md:mt-0">
               {navigationData.legal.map((item, index) => (

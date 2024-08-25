@@ -3,6 +3,7 @@ import ServiceCards from "./serviceCards";
 
 const AllServiceCards = () => {
   const [serviceCardsData, setServiceCardsData] = useState([]);
+  console.log("serviceCardsData", serviceCardsData);
 
   useEffect(() => {
     const fetchServiceCardsData = async () => {
@@ -24,18 +25,20 @@ const AllServiceCards = () => {
     <>
       <h2 className="text-center font-bold text-3xl">Services We Offer</h2>
       {serviceCardsData.length > 0 ? (
-        serviceCardsData.map((cardData, index) => (
-          <ServiceCards
-            key={index}
-            text1={cardData.text1}
-            img1={cardData.img1}
-            text2={cardData.text2}
-            img2={cardData.img2}
-            rotate={cardData.rotate}
-            bgcolor1={cardData.bgcolor1}
-            bgcolor2={cardData.bgcolor2}
-          />
-        ))
+        serviceCardsData.map((cardData, index) => {
+          console.log(index);
+          return (
+            <ServiceCards
+              text1={cardData.text1}
+              img1={cardData.img1}
+              text2={cardData.text2}
+              img2={cardData.img2}
+              rotate={cardData.rotate}
+              bgcolor1={cardData.bgcolor1}
+              bgcolor2={cardData.bgcolor2}
+            />
+          );
+        })
       ) : (
         <p className="text-center">No services available</p>
       )}
